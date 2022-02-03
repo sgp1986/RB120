@@ -1,0 +1,22 @@
+welcome: "Welcome to Rock, Paper, Scissors, Spock Lizard!"
+opponent: "Your oppenent for this match is: "
+invalid_yn: "Please enter (y)es or (n)o."
+invalid_name: "Sorry, please enter a name."
+enter_user_name: "Please enter your name:"
+ask_comp_name: "Would you like to name the computer? (y/n)"
+enter_comp_name: "Please enter a name for the computer:"
+see_rules: "Would you like to see the rules? (y/n)"
+rules: |
+  What's RPSLS?? Rock, Paper, Scissors, Lizard, Spock!
+  SCISSORS cuts PAPER covers ROCK crushes LIZARD poisons
+  SPOCK smashes SCISSORS decapitates LIZARD eats PAPER
+  disproves SPOCK vaporizes ROCK crushes SCISSORS
+  Easy, eh?
+choose_move: "Please choose your move:"
+countdown: "Ready?! One... Two... Three... SHOOT!"
+first_round: "Press enter when you're ready to start the first round!"
+continue: "Press enter when you're ready for the next round..."
+won: " has won the game!!"
+tie: "It's a tie!"
+play_again: "Would you like to play again? (y/n)"
+goodbye: "Thank you for playing Rock, Paper, Scissors, Spock Lizard! Take care "
