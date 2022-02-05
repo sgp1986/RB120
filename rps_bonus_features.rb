@@ -76,7 +76,7 @@ class GameEngine
       prompt PROMPTS['invalid_yn']
     end
 
-    return unless YES.include?(read_rules)
+    return unless read_rules.start_with?('y')
     print_rules
   end
 
@@ -139,25 +139,18 @@ class GameEngine
     display_moves
   end
 
-  def user_wins
-    self.round_winner = user.name
-    user.move.display_verb(computer.move)
-    prompt "Congrats #{user.name}, you have won this round!"
-    user.score += 1
-  end
-
-  def computer_wins
-    self.round_winner = computer.name
-    computer.move.display_verb(user.move)
-    prompt "Better luck next time, #{computer.name} has won this round."
-    computer.score += 1
+  def player_wins(player, other_player)
+    self.round_winner = player.name
+    player.move.display_verb(other_player.move)
+    prompt "Congrats to #{player.name} for winning this round!"
+    player.score += 1
   end
 
   def display_round_winner
     if user.move > computer.move
-      user_wins
+      player_wins(user, computer)
     elsif computer.move > user.move
-      computer_wins
+      player_wins(computer, user)
     else
       prompt PROMPTS['tie']
       self.round_winner = "No one."
@@ -226,7 +219,7 @@ class GameEngine
       puts PROMPTS['invalid_yn']
     end
 
-    return true if answer.downcase == 'y'
+    return true if answer.downcase.start_with?('y')
     false
   end
 
@@ -295,7 +288,7 @@ class Computer < Player
   def set_name
     answer = nil
     answer = ask_to_set_name(answer)
-    if answer == 'y'
+    if answer.start_with?('y')
       name = nil
       name = enter_computer_name(name)
       self.name = name.capitalize
