@@ -1,0 +1,20 @@
+board_size: |
+  What size board would you like to play on?
+  Enter an odd number between 3 and 9
+invalid_size: "Must be an odd number from 3 to 9."
+ask_marker: "Do you want to pick your marker?"
+invalid_input: "Please enter either (y)es or (n)o."
+marker: "Please choose your marker: X or O"
+invalid_marker: "Please enter either X or O."
+ask_starter: "Do you want to pick who goes first?"
+starter: "Ok, would you like to go first or second? Please enter 1 or 2."
+invalid_starter: "Please enter either 1 or 2."
+welcome: "Welcome to Tic Tac Toe!! first to fill a line with their marker wins!"
+your_marker: "Your marker is: "
+comp_marker: "Your opponent's marker is: "
+tie: "It's a tie!"
+choose: "Choose a square: "
+invalid_square: "Please enter a valid unmarked square number:"
+ask_again: "Great game! Do you want to play again? (y/n)"
+again: "Ok, let's run it again!"
+goodbye: "Thanks for playing Tic Tac Toe, have a good one!"
