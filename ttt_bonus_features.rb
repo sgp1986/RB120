@@ -123,7 +123,6 @@ module Displayable
     buffer_line
     display_board_keys
     buffer_line
-    # prompt "It's your turn" if @current_marker == human.marker
   end
 
   def display_board_keys
