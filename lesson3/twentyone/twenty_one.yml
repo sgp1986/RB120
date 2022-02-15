@@ -1,0 +1,87 @@
+intro: |
+  **The doors slide open as you approach. You are instantly hit by the smell of the buffet. 
+  The noises of the casino get your blood pumping and you're ready for a lil gambling.
+  You make your way past the gift shop, the roulette tables, craps.
+  You head to your home away from home... The BlackJack tables.
+  You come to the tables and decide which table to sit at.**
+
+                     << table signs >>
+          Low Limit 21: Min $5 Max $25 (enter 'low')
+         Mid Limit 21: Min $ 25 Max $50 (enter 'mid')
+        High Limit 21: Min $50 Max $100 (enter 'high')
+
+  **Which table will you choose?**
+sit_down: |
+  **You choose your table and sit down. The dealer greets you:**
+  "Welcome to Launch School Casino! My name is %s, do you have a Player's Card today?"
+  (Please enter your name now)
+welcome: |
+  **The dealer reads your name off your Player's Card, and hands it off to the Pit Boss to track your games.**
+  "Glad to have you %s! Please place your first bet while I finish shuffling!"
+scoreboard: |
+  -----------------------------------------------------------------------------
+                         Minbet: $%s | Maxbet: $%s
+                            You've won %s games
+                            %s's won %s games
+                      You currently have $%s in chips
+  -----------------------------------------------------------------------------
+user_bust: |
+  "It looks like you've busted %s. Sorry, but I've won this one."
+  You've lost your bet and now have $%s left. Bet wisely.
+dealer_bust: |
+  "Congrats, that's a bust for me! You've won this hand %s!"
+  You've won $%s this hand! You now have a total of $%s in chips.
+user_turn: |
+  **It's now your turn. The Dealer asks:**
+hit_or_stay: |
+  "Would you like to (h)it or (s)tay?"
+hit1: |
+  You tap the table, asking the dealer for another card.
+hit2: |
+  You call out "hit me" for a new card.
+hit3: |
+  You say "gimme another..."
+stay1: |
+  You wave off the dealer, indicating you want to stay.
+stay2: |
+  You call out "stay" to the dealer.
+stay3: |
+  You say "no more..." indicating stay.
+dealer_turn: |
+  **Your total was %s. %s now flips over their other card to reveal:**
+dealer_stay: |
+  "That's %s, Dealer stays."
+dealer_hit: |
+  "Dealer has %s, Dealer hits."
+  **%s flips down a new card...**
+user_win: |
+  "Your %s beats my %s, you win!"
+
+  You've won $%s this hand! You now have a total of $%s in chips.
+dealer_win: |
+  "My %s beats your %s, I win."
+
+  You've lost your $%s bet and now have %s in chips left.
+push: |
+  "We both have %s, its a push."
+
+  You've received your $%s bet back and have $%s in chips.
+blackjack: |
+  "That's a BlackJack!"
+
+  You've won $%s this hand! You now have a total of $%s in chips.
+ask_again: |
+  "Looks like you're out of chips. Buy in again?"
+goodbye: |
+  "That'll do it for me..." You say.
+  **The Pit Boss hands you back your Player's Card and says:**
+  "Thank you for playing 21 here at Launch School Casino! Don't forget to tip your dealer on your way out!"
+outro: |
+  **You toss a chip to the dealer, bid them goodday, and head off from the table. The question is, do you head home, or stop at the buffet on your way out... it *is* prime rib night after all...**
+no_name: "You must enter a value to continue."
+no_h_s: "Must enter either (h)it or (s)tay."
+no_limit: "Must enter either 'low', 'mid', or 'high'"
+shuffling: |
+  "Shuffling a new deck!"
+  (hit enter when you're ready for the next hand)
+continue: "(Please hit enter to continue)"
