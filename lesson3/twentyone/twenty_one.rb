@@ -1,4 +1,3 @@
-require 'pry'
 require 'yaml'
 
 PROMPTS = YAML.load_file("twenty_one.yml")
