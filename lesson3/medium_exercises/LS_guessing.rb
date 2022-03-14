@@ -1,7 +1,4 @@
 class GuessingGame
-  MAX_GUESSES = 7
-  RANGE = 1..100
-
   RESULT_OF_GUESS_MESSAGE = {
     high:  "Your number is too high.",
     low:   "Your number is too low.",
@@ -19,9 +16,13 @@ class GuessingGame
     lose: "You have no more guesses. You lost!"
   }.freeze
 
-  def initialize
+  def initialize(low_range, high_range)
+    @range = low_range..high_range
+    @max_guesses = Math.log2(high_range - low_range).to_i + 1
     @secret_number = nil
   end
+  
+  
 
   def play
     reset
@@ -32,12 +33,12 @@ class GuessingGame
   private
 
   def reset
-    @secret_number = rand(RANGE)
+    @secret_number = rand(@range)
   end
 
   def play_game
     result = nil
-    MAX_GUESSES.downto(1) do |remaining_guesses|
+    @max_guesses.downto(1) do |remaining_guesses|
       display_guesses_remaining(remaining_guesses)
       result = check_guess(obtain_one_guess)
       puts RESULT_OF_GUESS_MESSAGE[result]
@@ -46,6 +47,8 @@ class GuessingGame
     WIN_OR_LOSE[result]
   end
 
+  private
+  
   def display_guesses_remaining(remaining)
     puts
     if remaining == 1
@@ -57,9 +60,9 @@ class GuessingGame
 
   def obtain_one_guess
     loop do
-      print "Enter a number between #{RANGE.first} and #{RANGE.last}: "
+      print "Enter a number between #{@range.first} and #{@range.last}: "
       guess = gets.chomp.to_i
-      return guess if RANGE.cover?(guess)
+      return guess if @range.cover?(guess)
       print "Invalid guess. "
     end
   end
@@ -74,3 +77,7 @@ class GuessingGame
     puts "", RESULT_OF_GAME_MESSAGE[result]
   end
 end
+
+game = GuessingGame.new(501, 2500)
+game.play
+game.play
